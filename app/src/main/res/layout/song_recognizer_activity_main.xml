@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/lyricaGray">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginBottom="-150dp"
+        android:text="Find The Song"
+        android:textColor="@color/lyricaOrange"
+        android:textSize="40dp"
+        android:textStyle="bold"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/recognize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="200dp"
+        android:backgroundTint="@color/lyricaGray"
+        app:srcCompat="@drawable/radar_icon_100" />
+
+    <Button
+        android:id="@+id/permission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="130dp"
+        android:backgroundTint="@color/lyricaGray"
+        android:text="Enable mic"
+        android:textColor="@color/lyricaOrange" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textSize="21sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

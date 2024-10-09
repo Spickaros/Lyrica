@@ -1,0 +1,37 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/menu_top"
+        android:checkableBehavior="single">
+    <item
+        android:id="@+id/nav_my_recognitions"
+        android:title="My Recognitions"
+        android:actionLayout="@layout/nav_menu_item"/>
+
+    <item
+        android:id="@+id/nav_my_lyrics"
+        android:title="My Lyrics"
+        android:actionLayout="@layout/nav_menu_item"/>
+
+    <item
+        android:id="@+id/nav_artist_info"
+        android:title="Most Relative Artists"
+        android:actionLayout="@layout/nav_menu_item"/>
+    </group>
+    <!-- Divider Line -->
+
+    <group
+        android:id="@+id/menu_bottom"
+        android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/nav_mapping"
+            android:title="Events Nearby"
+            android:actionLayout="@layout/nav_menu_item"/>
+    <item
+        android:id="@+id/nav_assistant"
+        android:title="Assistant"
+        android:actionLayout="@layout/nav_menu_item"/>
+
+
+    </group>
+</menu>

@@ -1,0 +1,72 @@
+<!-- artist_activity_main.xml -->
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/lyricaGray">
+
+    <!-- AppBarLayout for the title that will collapse when scrolled -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <!-- CollapsingToolbarLayout to handle collapsing behavior -->
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_marginBottom="-1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lyricaGray"
+
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <!-- The title TextView that will collapse on scroll -->
+            <TextView
+                android:id="@+id/text_artists_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/lyricaOrange"
+                android:text="Your Most Relevant Artists"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Scrollable content: RecyclerView and "No Data" TextView -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- TextView for "No Data Available" -->
+            <TextView
+                android:id="@+id/text_no_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Data Available"
+                android:visibility="gone"
+                android:padding="16dp" />
+
+            <!-- RecyclerView for displaying artist items -->
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/recyclerView_artists"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

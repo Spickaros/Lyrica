@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#454545"
+        tools:context=".SignInActivity">
+
+        <!-- Container with Border -->
+
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="354dp"
+            android:layout_height="358dp"
+            android:layout_marginTop="150dp"
+
+            android:background="@drawable/border"
+            app:layout_constraintBottom_toTopOf="@id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="NotSibling">
+
+            <LinearLayout
+                android:layout_width="354dp"
+                android:layout_height="358dp"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+
+                <TextView
+                    android:layout_width="136dp"
+                    android:layout_height="72dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="-10px"
+                    android:layout_marginBottom="10dp"
+                    android:text="Login"
+                    android:textColor="#FB8231"
+                    android:textSize="45sp"
+                    android:textStyle="bold"
+                    tools:ignore="MissingConstraints" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/emailLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeColor="#FB8231"
+                    app:cursorColor="@color/black"
+                    app:hintTextColor="#FB8231">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/emailEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:hint="Type your Email"
+                        android:inputType="textEmailAddress" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/passwordLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    app:boxStrokeColor="#FB8231"
+                    app:hintTextColor="#FB8231"
+                    app:cursorColor="@color/black"
+                    app:passwordToggleEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/passET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Type Your Password"
+                        android:inputType="textPassword" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button"
+                    android:layout_width="138dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/background_button"
+                        android:text="Log In"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+
+                    android:layout_marginTop="0dp"
+                    android:text="Not Registered Yet?"
+                    android:textColor="@color/black"
+                    tools:ignore="MissingConstraints,NotSibling" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="190dp"
+                    android:layout_marginTop="-20dp"
+                    android:text="Sign Up !"
+                    android:textColor="#FB8231"
+                    tools:ignore="MissingConstraints,NotSibling" />
+
+
+            </LinearLayout>
+        </FrameLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

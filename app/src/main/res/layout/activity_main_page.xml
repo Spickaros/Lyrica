@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainPageActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#454545">
+
+        <!-- ImageButton to open Navigation Drawer -->
+
+        <!-- Floating Action Button for adding more options -->
+        <ImageButton
+            android:id="@+id/nav_button"
+            android:layout_width="52dp"
+            android:layout_height="42dp"
+            android:layout_margin="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="96dp"
+            android:background="@null"
+            android:src="@drawable/menu_icon_30"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:focusable="true"
+            android:clickable="true"
+            android:backgroundTint="@color/black"
+            android:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/baseline_add_24" />
+
+        <!-- Other Floating Action Buttons -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/openVocalRemoverButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#FB8231"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/add_btn"
+            app:layout_constraintEnd_toEndOf="@+id/add_btn"
+            app:srcCompat="@drawable/soundwave_icon" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/openSongRecognizer_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:focusable="true"
+            android:clickable="true"
+            android:backgroundTint="#FB8231"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/openVocalRemoverButton"
+            app:layout_constraintEnd_toEndOf="@+id/openVocalRemoverButton"
+            app:srcCompat="@drawable/radar_icon" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/openVoiceToText_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:backgroundTint="#FB8231"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/openSongRecognizer_btn"
+            app:layout_constraintEnd_toEndOf="@+id/openSongRecognizer_btn"
+            app:srcCompat="@drawable/lyrics_icon" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Lyrica"
+            android:textColor="@color/lyricaOrange"
+            android:textSize="40sp"
+            android:layout_marginLeft="140dp"
+            android:textStyle="bold"
+            android:layout_marginTop="50dp" />
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="354dp"
+            android:layout_height="430dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="150dp"
+            android:background="@drawable/border"
+            app:layout_constraintBottom_toTopOf="@id/logout_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="NotSibling">
+
+            <TextView
+                android:id="@+id/description_text"
+                android:layout_width="334dp"
+                android:layout_height="470dp"
+                android:padding="16dp"
+                android:textStyle="italic"
+                android:text="Lyrica is a cutting-edge mobile application designed for music enthusiasts and creators alike. Using advanced audio processing technology, Lyrica has the capability to split songs into distinct tracks, isolating vocals and instruments seamlessly. Its intuitive interface allows users to easily extract vocals or instrumentals from their favorite tracks, enabling remixing, karaoke, and personalized music experiences."
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/add_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- NavigationView for the Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        android:background="@color/lyricaGray"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/nav_menu" />
+</androidx.drawerlayout.widget.DrawerLayout>

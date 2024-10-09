@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="@color/lyricaGray">
+
+    <!-- Song Upload Section -->
+
+    <!-- Download Links Section -->
+    <LinearLayout
+        android:id="@+id/uploadSection"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/addSong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:text="Add a song here!"
+            android:textColor="#FF7B23"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/selectFileButton"
+            android:layout_width="318dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#575757"
+            android:text="Select File"
+            android:background="@drawable/rounded_corner"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/uploadFileButton"
+            android:layout_width="116dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="95dp"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="#575757"
+            android:text="Upload File"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/statusTextView"
+            android:layout_width="178dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="-50dp"
+            android:width="100dp"
+            android:height="80dp"
+            android:padding="8dp"
+            android:text=""
+            android:textColor="#575757"
+            android:textSize="8dp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:backgroundTint="@color/white"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/downloadSection"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_width="411dp"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/downloadMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Download your stems"
+            android:textColor="#FF7B23"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:id="@+id/linksContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/text_view_1"
+                android:layout_width="130dp"
+                android:layout_height="65dp"
+                android:background="@drawable/rounded_corner"
+                android:backgroundTint="#575757"
+                android:padding="16dp"
+                android:text="Vocals"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/text_view_2"
+                android:layout_width="130dp"
+                android:layout_height="65dp"
+                android:background="@drawable/rounded_corner"
+                android:backgroundTint="#575757"
+                android:padding="16dp"
+                android:text="Instrumental"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <!-- Add this button to allow the user to go back to the upload section -->
+        <Button
+            android:id="@+id/backToUploadButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="95dp"
+            android:backgroundTint="#575757"
+            android:text="Back to Upload"
+            android:background="@drawable/rounded_corner"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</LinearLayout>
